@@ -1,7 +1,9 @@
 fileFormatVersion: 2
 guid: a7875fe4dab1e484ab3204c17581e5f2
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: quiz_platform_0
+    21300002: quiz_platform_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -71,7 +73,47 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: quiz_platform_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 124
+        width: 290
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52be4458a6c42bc468c054951c5912a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quiz_platform_1
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 124
+        width: 290
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c305df534d5c2f346ac70045dbd53ea6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
