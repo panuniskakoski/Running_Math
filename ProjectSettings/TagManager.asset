@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Quiz_pad
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Ground
   - Quiz_pad
   - Background
-  - 
+  - Non_solid
   - 
   - 
   - 
