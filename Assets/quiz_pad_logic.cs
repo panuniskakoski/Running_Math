@@ -34,6 +34,20 @@ public class quiz_pad_logic : MonoBehaviour
                     hitbox = child.GetComponent<BoxCollider2D>();
                     hitbox.enabled = true;
                 }
+
+                if (child.tag == "Spike")
+                {
+                    child.GetComponent<Animator>().SetBool("Activated", true);
+                    hitbox = child.GetComponent<BoxCollider2D>();
+                    hitbox.enabled = false;
+                }
+
+                if (child.tag == "Red")
+                {
+                    child.GetComponent<Animator>().SetBool("Activated", true);
+                    hitbox = child.GetComponent<BoxCollider2D>();
+                    hitbox.enabled = false;
+                }
             }
 
             // Makes sure we don't do this more than once
