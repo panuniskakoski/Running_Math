@@ -8,6 +8,8 @@ public class quiz_pad_logic : MonoBehaviour
     private bool isDone = false;
     public bool isActive = false;
 
+    public Vector3 checkPointPos;
+
     Animator anim;
     Animator child_anim;
 
@@ -17,7 +19,7 @@ public class quiz_pad_logic : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();  
+        anim = GetComponent<Animator>();
     }
 
     void Update()

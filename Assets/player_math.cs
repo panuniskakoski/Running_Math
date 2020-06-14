@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class player_math : MonoBehaviour
 {
+
     // Kaikki statsit mitä hahmosta tarviaa träkkää
     public bool counting = true;
     public bool ready_with_counting = false;
@@ -18,6 +19,9 @@ public class player_math : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Player Movement frozen until countdown is 0
+        this.gameObject.GetComponent<PlayerMovement>().enabled = false;
+
         computer = GameObject.Find("Computer");
     }
 

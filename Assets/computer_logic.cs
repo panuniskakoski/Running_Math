@@ -13,6 +13,7 @@ public class computer_logic : MonoBehaviour
 
     public GameObject player;
     public GameObject active_quiz_pad;
+    public Vector3 CheckPointPos;
 
     public int digit_1_int = 0;
     public char operation_char;
@@ -45,6 +46,7 @@ public class computer_logic : MonoBehaviour
         digit_1.SendMessage("NextDigit");
         operation.SendMessage("NextOperation");
         digit_2.SendMessage("NextDigit");
+        result.SendMessage("EmptyResult");
     }
     
     // If player is on a quiz pad
@@ -81,6 +83,7 @@ public class computer_logic : MonoBehaviour
         // Check if player is on quiz pad
         if (player.GetComponent<player_math>().on_quiz_pad)
         {
+
             active_quiz_pad = GameObject.Find(player.GetComponent<player_math>().current_pad.name);
         }
 
@@ -95,6 +98,7 @@ public class computer_logic : MonoBehaviour
                     player_input += i.ToString();
                     Debug.Log("Syöte atm " + player_input);
                     result.GetComponent<Text>().text = int.Parse(player_input).ToString();
+                    result.GetComponent<Text>().color = Color.black;
                 }
             }
 
@@ -106,6 +110,14 @@ public class computer_logic : MonoBehaviour
                 if (int.Parse(player_input) == right_answer)
                 {
                     Debug.Log("Oikein oli!");
+                    result.GetComponent<Text>().color = Color.green;
+
+
+                    // Merkkaa uuden check pointin
+                    float offsetY = 4.0f;
+                    // CheckPointPos = player.GetComponent<player_math>().current_pad.transform.position;
+                    CheckPointPos = new Vector3(player.GetComponent<player_math>().current_pad.transform.position.x, 
+                                                player.GetComponent<player_math>().current_pad.transform.position.y + offsetY);
 
                     // Quiz pad is marked as solved
                     active_quiz_pad.GetComponent<quiz_pad_logic>().isSolved = true;
@@ -119,6 +131,7 @@ public class computer_logic : MonoBehaviour
                 else
                 {
                     Debug.Log("Väärin, pelle.");
+                    result.GetComponent<Text>().color = Color.red;
                     result.GetComponent<Text>().text = "?";
                     // Run computer "wrong" animation once
                     // Play sound que WRONG

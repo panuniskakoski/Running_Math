@@ -9,6 +9,7 @@ TagManager:
   - Spike
   - Ground
   - Red
+  - GM
   layers:
   - Default
   - TransparentFX

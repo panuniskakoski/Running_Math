@@ -62,15 +62,19 @@
   <ItemGroup>
     <Compile Include="Assets\computer_logic.cs" />
     <Compile Include="Assets\digit_script.cs" />
+    <Compile Include="Assets\Game_master.cs" />
     <Compile Include="Assets\green_l_script.cs" />
     <Compile Include="Assets\operation_script.cs" />
     <Compile Include="Assets\player_math.cs" />
     <Compile Include="Assets\player_movement.cs" />
     <Compile Include="Assets\quiz_pad_logic.cs" />
+    <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\result_script.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\StartGame.cs" />
+    <Compile Include="Assets\StopWatch.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Panu/Desktop/Projects/Running_Math/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
