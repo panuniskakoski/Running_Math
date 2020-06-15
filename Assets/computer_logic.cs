@@ -11,6 +11,9 @@ public class computer_logic : MonoBehaviour
     public GameObject digit_2;
     public GameObject result;
 
+    public Animator radar_anim;
+    public Animator result_light_anim;
+
     public GameObject player;
     public GameObject active_quiz_pad;
     public Vector3 CheckPointPos;
@@ -27,11 +30,13 @@ public class computer_logic : MonoBehaviour
     {
         player = GameObject.Find("Player");
 
-
         digit_1 = GameObject.Find("Digit_1");
         operation = GameObject.Find("Operation");
         digit_2 = GameObject.Find("Digit_2");
         result = GameObject.Find("Result");
+
+        radar_anim = GameObject.Find("radar").GetComponent<Animator>();
+        result_light_anim = GameObject.Find("result_light").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -83,13 +88,19 @@ public class computer_logic : MonoBehaviour
         // Check if player is on quiz pad
         if (player.GetComponent<player_math>().on_quiz_pad)
         {
-
             active_quiz_pad = GameObject.Find(player.GetComponent<player_math>().current_pad.name);
+            result_light_anim.SetBool("Wrong", false);
+        } else
+        {
+            result_light_anim.SetBool("Right", false);
+            radar_anim.SetBool("Activated", false);
         }
+            
 
         // Input allowed only if player is on quiz pad && that quiz pad has not been solved.
         if (player.GetComponent<player_math>().on_quiz_pad && !active_quiz_pad.GetComponent<quiz_pad_logic>().isSolved)
         {
+            radar_anim.SetBool("Activated", true);
             // What happens when player is on quiz pad and number on numpad is pressed
             for (int i = 0; i < 10; i++)
             {
@@ -110,7 +121,9 @@ public class computer_logic : MonoBehaviour
                 if (int.Parse(player_input) == right_answer)
                 {
                     Debug.Log("Oikein oli!");
+                    result_light_anim.SetBool("Right", true);
                     result.GetComponent<Text>().color = Color.green;
+                    radar_anim.SetBool("Activated", false);
 
 
                     // Merkkaa uuden check pointin
@@ -131,6 +144,7 @@ public class computer_logic : MonoBehaviour
                 else
                 {
                     Debug.Log("Väärin, pelle.");
+                    result_light_anim.SetBool("Wrong", true);
                     result.GetComponent<Text>().color = Color.red;
                     result.GetComponent<Text>().text = "?";
                     // Run computer "wrong" animation once
