@@ -50,6 +50,16 @@ public class quiz_pad_logic : MonoBehaviour
                     hitbox = child.GetComponent<BoxCollider2D>();
                     hitbox.enabled = false;
                 }
+
+                if (child.tag == "Graphics")
+                {
+                    child.GetComponent<SpriteRenderer>().enabled = true;
+                }
+
+                if (child.tag == "Animation")
+                {
+                    child.GetComponent<Animator>().SetBool("Activated", true);
+                }
             }
 
             // Makes sure we don't do this more than once

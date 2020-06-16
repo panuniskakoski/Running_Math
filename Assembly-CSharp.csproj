@@ -63,7 +63,10 @@
     <Compile Include="Assets\computer_logic.cs" />
     <Compile Include="Assets\digit_script.cs" />
     <Compile Include="Assets\Game_master.cs" />
+    <Compile Include="Assets\GetTime.cs" />
     <Compile Include="Assets\green_l_script.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
+    <Compile Include="Assets\MouseHover.cs" />
     <Compile Include="Assets\operation_script.cs" />
     <Compile Include="Assets\player_math.cs" />
     <Compile Include="Assets\player_movement.cs" />
@@ -75,6 +78,8 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\StartGame.cs" />
     <Compile Include="Assets\StopWatch.cs" />
+    <Compile Include="Assets\Victory.cs" />
+    <Compile Include="Assets\VictoryMenu.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Panu/Desktop/Projects/Running_Math/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
