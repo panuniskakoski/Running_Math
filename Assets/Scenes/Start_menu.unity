@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8d285d5e68b234989ec1188af3d9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToPlay: 1
 --- !u!61 &1269134016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1101,6 +1102,105 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 336.62137, y: 58.21882}
   m_EdgeRadius: 0
+--- !u!1 &2121487047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121487049}
+  - component: {fileID: 2121487048}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2121487048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121487047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bb7e21f0771f94fb6072c8a2a5f276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: blanca_silent_hur
+    clip: {fileID: 8300000, guid: ff3085ef8d6c71240925fb567c37064a, type: 3}
+    pitch: 1
+    volume: 0.1
+    source: {fileID: 0}
+  - name: blanca_silent_nur
+    clip: {fileID: 8300000, guid: a1464d8b9cb3c7d409cb8b3a44e9164f, type: 3}
+    pitch: 1
+    volume: 6
+    source: {fileID: 0}
+  - name: button_press
+    clip: {fileID: 8300000, guid: 9559f1b01f34100448f465c0f678591e, type: 3}
+    pitch: 1
+    volume: 1
+    source: {fileID: 0}
+  - name: fireworks
+    clip: {fileID: 8300000, guid: 4c0f929852e7855418bea585f5a9be46, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: go
+    clip: {fileID: 8300000, guid: 8eca4c7fa71b3ae4d9d02c36d75d9cd8, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: level_music
+    clip: {fileID: 8300000, guid: c53c536271658934f945cdd86299e877, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: ready_set
+    clip: {fileID: 8300000, guid: 7c5917f0e2e13ed45a2829a17ad5d6fe, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: menu_music
+    clip: {fileID: 8300000, guid: 05ff9e2189e671b40a9d8c30b3ae9383, type: 3}
+    pitch: 1
+    volume: 1
+    source: {fileID: 0}
+  - name: right
+    clip: {fileID: 8300000, guid: 2f89612067b4e97478b0bea9391f0b09, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: running
+    clip: {fileID: 8300000, guid: 4691c145e90855e48b9955ee1334d634, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+  - name: wrong
+    clip: {fileID: 8300000, guid: bcb7e6580bdc9a44ab6f77582dfa425e, type: 3}
+    pitch: 0
+    volume: 0
+    source: {fileID: 0}
+--- !u!4 &2121487049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121487047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 483.40063, y: 279.74774, z: -6.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122621713
 GameObject:
   m_ObjectHideFlags: 0

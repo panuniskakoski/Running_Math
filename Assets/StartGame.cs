@@ -17,6 +17,7 @@ public class StartGame : MonoBehaviour
     {
         player = GameObject.Find("Player");
         stopwatch = GameObject.Find("Stopwatch");
+        FindObjectOfType<AudioManager>().Play("level_music");
     }
 
     void Update()
@@ -27,7 +28,9 @@ public class StartGame : MonoBehaviour
             startText.text = (timeLeft).ToString("0");
             if (timeLeft < 0)
             {
+                FindObjectOfType<AudioManager>().Play("go");
                 Destroy(GameObject.Find("countdown"));
+
 
                 // Start the stopwatch
                 stopwatch.GetComponent<StopWatch>().timerActive = true;

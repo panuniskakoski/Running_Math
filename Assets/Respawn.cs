@@ -18,6 +18,7 @@ public class Respawn : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("blanca_silent_nur");
             other.transform.position = computer.GetComponent<computer_logic>().CheckPointPos;
         }
     }

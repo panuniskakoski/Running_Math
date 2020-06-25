@@ -60,12 +60,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AudioManager.cs" />
     <Compile Include="Assets\computer_logic.cs" />
     <Compile Include="Assets\digit_script.cs" />
+    <Compile Include="Assets\fireworks.cs" />
     <Compile Include="Assets\Game_master.cs" />
     <Compile Include="Assets\GetTime.cs" />
     <Compile Include="Assets\green_l_script.cs" />
     <Compile Include="Assets\MainMenu.cs" />
+    <Compile Include="Assets\monkey_sound.cs" />
     <Compile Include="Assets\MouseHover.cs" />
     <Compile Include="Assets\operation_script.cs" />
     <Compile Include="Assets\player_math.cs" />
@@ -76,6 +79,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\StartGame.cs" />
     <Compile Include="Assets\StopWatch.cs" />
     <Compile Include="Assets\Victory.cs" />

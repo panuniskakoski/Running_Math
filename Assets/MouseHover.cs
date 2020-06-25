@@ -7,6 +7,8 @@ public class MouseHover : MonoBehaviour
     private Animator start_anim;
     private Animator end_anim;
 
+    public bool readyToPlay = true;
+
     private void Start()
     {
         start_anim = GameObject.Find("Start_button").GetComponent<Animator>();
@@ -25,5 +27,6 @@ public class MouseHover : MonoBehaviour
         //The mouse is no longer hovering over the GameObject so output this message each frame
         Debug.Log("Mouse is no longer on GameObject.");
         end_anim.SetBool("Run", false);
+        readyToPlay = true;
     }
 }

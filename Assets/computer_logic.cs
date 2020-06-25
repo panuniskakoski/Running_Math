@@ -139,7 +139,7 @@ public class computer_logic : MonoBehaviour
                     result.GetComponent<Text>().text = right_answer.ToString();
 
                     // Run computer "correct" animation once
-                    // Play sound que RIGHT
+                    FindObjectOfType<AudioManager>().Play("right");
                 }
                 else
                 {
@@ -148,7 +148,7 @@ public class computer_logic : MonoBehaviour
                     result.GetComponent<Text>().color = Color.red;
                     result.GetComponent<Text>().text = "?";
                     // Run computer "wrong" animation once
-                    // Play sound que WRONG
+                    FindObjectOfType<AudioManager>().Play("wrong");
                 }
 
                 player_input = "0";
